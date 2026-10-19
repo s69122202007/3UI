@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="เว็บไซต์ต้นแบบองค์การบริหารส่วนตำบล ให้บริการข้อมูลข่าวสาร ติดต่อหน่วยงาน และรับคำร้องออนไลน์">
+<title>องค์การบริหารส่วนตำบล | เว็บไซต์บริการประชาชน</title>
+<style>
+:root{--navy:#12345a;--blue:#1769aa;--sky:#eaf5ff;--gold:#f4c542;--ink:#1f2937;--muted:#64748b;--white:#fff;--line:#dbe5ef;--green:#15803d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Tahoma,"Noto Sans Thai",Arial,sans-serif;color:var(--ink);line-height:1.65;background:#f7fafc}a{color:inherit}button,input,select,textarea{font:inherit}button,a,.btn{transition:.2s}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #f4c542;outline-offset:2px}
+.topbar{background:#0c2542;color:#fff;font-size:.9rem;padding:7px 5%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.topbar a{color:#fff}.header{background:white;display:flex;align-items:center;gap:16px;padding:18px 5%;border-bottom:1px solid var(--line)}.seal{width:65px;height:65px;flex-shrink:0;border-radius:50%;display:grid;place-items:center;background:var(--sky);border:3px solid var(--gold);font-size:30px}.brand h1{font-size:1.35rem;color:var(--navy);margin:0}.brand p{margin:2px 0 0;color:var(--muted);font-size:.92rem}.header-actions{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}.btn{border:0;border-radius:9px;padding:10px 15px;display:inline-flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;cursor:pointer;font-weight:700}.btn-primary{background:var(--blue);color:white}.btn-primary:hover{background:var(--navy);transform:translateY(-1px)}.btn-gold{background:var(--gold);color:#192b40}.btn-outline{border:1px solid var(--blue);color:var(--blue);background:#fff}.btn-small{padding:7px 10px;font-size:.9rem}
+nav{background:var(--navy);color:white;padding:0 5%;display:flex;align-items:center;gap:3px;flex-wrap:wrap}nav a{padding:13px 14px;text-decoration:none;border-bottom:3px solid transparent}nav a:hover,nav a.active{background:#1b4774;border-bottom-color:var(--gold)}.menu-toggle{display:none;background:var(--navy);color:white;border:0;padding:10px 5%;width:100%;text-align:left;font-weight:bold}
+.hero{background:linear-gradient(115deg,rgba(10,38,70,.94),rgba(23,105,170,.78)),url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;padding:55px 5% 48px}.hero-inner{max-width:1200px;margin:auto}.eyebrow{color:var(--gold);font-weight:bold;letter-spacing:.04em}.hero h2{font-size:clamp(1.8rem,4vw,3rem);line-height:1.3;margin:10px 0;max-width:760px}.hero p{max-width:700px;color:#edf6ff;font-size:1.08rem}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.searchbar{margin-top:28px;display:flex;max-width:700px;background:white;padding:6px;border-radius:12px;gap:6px}.searchbar input{min-width:0;flex:1;border:0;padding:10px;color:var(--ink);outline:none}.searchbar button{flex-shrink:0}
+.container{max-width:1200px;margin:auto;padding:30px 5%}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:18px}.section-head h2{margin:0;color:var(--navy);font-size:1.55rem}.section-head p{margin:3px 0 0;color:var(--muted)}.grid{display:grid;gap:16px}.services{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:20px;box-shadow:0 4px 16px #163a5b08}.service-card{text-decoration:none;display:block}.service-card:hover{transform:translateY(-3px);box-shadow:0 12px 25px #12345a15;border-color:#a9cbea}.service-icon{font-size:2rem;background:var(--sky);width:55px;height:55px;border-radius:13px;display:grid;place-items:center}.card h3{margin:12px 0 5px;color:var(--navy);font-size:1.08rem}.card p{margin:0;color:var(--muted);font-size:.95rem}.two-col{grid-template-columns:1.2fr .8fr}.news-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}.news-item:last-child{border-bottom:0}.datebox{width:65px;min-width:65px;height:68px;border-radius:10px;background:var(--sky);color:var(--blue);display:grid;place-content:center;text-align:center;font-weight:bold}.datebox small{font-size:.75rem}.news-item h3{margin:0 0 4px;font-size:1rem}.news-item p{font-size:.9rem}.tag{display:inline-block;font-size:.78rem;border-radius:30px;padding:2px 9px;background:#dcfce7;color:#166534;margin-bottom:5px}.notice{border-left:4px solid var(--gold);background:#fff8db;padding:13px 15px;border-radius:0 9px 9px 0;margin:14px 0;color:#59440a}.quick-links{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}.quick-links a{border:1px solid var(--line);border-radius:10px;padding:11px;text-decoration:none;font-weight:600;color:var(--navy)}.quick-links a:hover{background:var(--sky)}.stats{background:var(--sky);display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding:25px 5%;text-align:center}.stats strong{display:block;font-size:1.4rem;color:var(--navy)}.stats span{font-size:.9rem;color:var(--muted)}.form-layout{grid-template-columns:1fr 1fr}.form-card label{display:block;font-weight:700;margin:12px 0 5px;color:var(--navy)}.form-card input,.form-card select,.form-card textarea{width:100%;border:1px solid #cbd5e1;border-radius:8px;padding:10px;background:white}.form-card textarea{min-height:105px;resize:vertical}.hint{font-size:.85rem;color:var(--muted)}.status-result{margin-top:14px;padding:14px;border-radius:10px;background:#f0fdf4;border:1px solid #bbf7d0;display:none;overflow-wrap:anywhere}.status-result.show{display:block}.faq details{background:white;border:1px solid var(--line);border-radius:10px;padding:13px 16px;margin:9px 0}.faq summary{cursor:pointer;font-weight:bold;color:var(--navy)}.faq p{margin-bottom:0;color:var(--muted)}footer{background:#0c2542;color:#e5eef7;padding:32px 5%}.footer-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:25px}footer h3{color:var(--gold);margin-top:0}footer p,footer a{font-size:.92rem;color:#e5eef7}footer a{display:block;margin:6px 0}.copyright{text-align:center;border-top:1px solid #35516f;margin-top:24px;padding-top:16px;font-size:.85rem;color:#b7c7d8}.backtop{position:fixed;right:18px;bottom:18px;width:45px;height:45px;border:0;border-radius:50%;background:var(--gold);color:#142b44;font-size:1.25rem;cursor:pointer;box-shadow:0 4px 14px #0002;display:none}.backtop.show{display:block}.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#102d4d;color:white;padding:12px 18px;border-radius:10px;display:none;z-index:10;max-width:90%;box-shadow:0 8px 25px #0003}.toast.show{display:block}.hidden{display:none!important}
+@media(max-width:850px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}.two-col,.form-layout{grid-template-columns:1fr}.header{align-items:flex-start}.header-actions{display:none}.menu-toggle{display:block}nav{display:none;flex-direction:column;align-items:stretch;padding:0 5%}nav.open{display:flex}nav a{padding:11px}.footer-inner{grid-template-columns:1fr 1fr}.hero{padding-top:38px}}
+@media(max-width:520px){.topbar{font-size:.8rem}.header{padding:14px 5%;gap:10px}.seal{width:49px;height:49px;font-size:24px}.brand h1{font-size:1.05rem}.brand p{font-size:.8rem}.services{grid-template-columns:1fr 1fr;gap:10px}.services .card{padding:14px}.service-icon{width:45px;height:45px;font-size:1.6rem}.container{padding-top:24px;padding-bottom:24px}.section-head{align-items:start;flex-direction:column}.searchbar{flex-wrap:wrap}.searchbar input{flex-basis:100%}.searchbar button{width:100%}.stats{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr}.hero-actions .btn{flex:1}.quick-links{grid-template-columns:1fr}}
+@media print{.topbar,nav,.menu-toggle,.header-actions,.hero-actions,.searchbar,.backtop,footer{display:none!important}body{background:white}.hero{background:#eee;color:#111;padding:20px}.hero p{color:#333}.container{padding:15px 0}.card{box-shadow:none}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>📢 เว็บไซต์บริการประชาชน องค์การบริหารส่วนตำบล</span><span>เวลาทำการ: จันทร์–ศุกร์ 08.30–16.30 น. (ยกเว้นวันหยุดราชการ)</span></div>
+<header class="header">
+  <div class="seal" aria-hidden="true">🏛️</div>
+  <div class="brand"><h1>องค์การบริหารส่วนตำบลตัวอย่าง</h1><p>บริการโปร่งใส ใส่ใจประชาชน พัฒนาท้องถิ่นอย่างยั่งยืน</p></div>
+  <div class="header-actions"><a class="btn btn-outline" href="#contact">☎ ติดต่อ อบต.</a><a class="btn btn-primary" href="#request">✍ ยื่นคำร้องออนไลน์</a></div>
+</header>
+<button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">☰ เมนูเว็บไซต์</button>
+<nav id="mainNav" aria-label="เมนูหลัก">
+  <a class="active" href="#home">หน้าแรก</a><a href="#services">บริการประชาชน</a><a href="#news">ข่าวประชาสัมพันธ์</a><a href="#request">ยื่นคำร้องออนไลน์</a><a href="#tracking">ติดตามคำร้อง</a><a href="#about">เกี่ยวกับ อบต.</a><a href="#contact">ติดต่อเรา</a>
+</nav>
+<main>
+<section class="hero" id="home"><div class="hero-inner">
+  <span class="eyebrow">LOCAL GOVERNMENT • PUBLIC SERVICE</span>
+  <h2>อบต. ใกล้คุณ<br>เข้าถึงบริการท้องถิ่นได้ง่ายขึ้น</h2>
+  <p>ค้นหาข้อมูลข่าวสาร บริการประชาชน และช่องทางติดต่อหน่วยงานได้ในที่เดียว ใช้งานสะดวกทั้งโทรศัพท์มือถือและคอมพิวเตอร์</p>
+  <div class="hero-actions"><a class="btn btn-gold" href="#services">ดูบริการทั้งหมด ↓</a><a class="btn btn-outline" style="background:#fff" href="#request">ส่งคำร้องออนไลน์</a></div>
+  <form class="searchbar" id="siteSearch" role="search"><input id="searchInput" aria-label="ค้นหาบริการหรือข่าวสาร" placeholder="ค้นหา เช่น เบี้ยยังชีพ, ขยะ, น้ำประปา, ข่าวสาร"><button class="btn btn-primary" type="submit">🔎 ค้นหา</button></form>
+</div></section>
+<section class="container" id="services"><div class="section-head"><div><h2>บริการประชาชน</h2><p>เลือกหัวข้อที่ต้องการเพื่อดูรายละเอียดหรือส่งคำร้อง</p></div></div>
+<div class="grid services" id="serviceGrid">
+<a class="card service-card" href="#request" data-keywords="ร้องเรียน ร้องทุกข์ แจ้งปัญหา"><div class="service-icon">📣</div><h3>ร้องเรียน / ร้องทุกข์</h3><p>แจ้งปัญหาถนน ไฟฟ้า น้ำประปา หรือปัญหาในชุมชน</p></a>
+<a class="card service-card" href="#request" data-keywords="ขยะ สิ่งแวดล้อม เก็บขยะ"><div class="service-icon">♻️</div><h3>จัดการขยะและสิ่งแวดล้อม</h3><p>แจ้งจุดขยะตกค้างหรือปัญหาสิ่งแวดล้อม</p></a>
+<a class="card service-card" href="#request" data-keywords="เบี้ยยังชีพ ผู้สูงอายุ ผู้พิการ สวัสดิการ"><div class="service-icon">🤝</div><h3>สวัสดิการสังคม</h3><p>ข้อมูลเบี้ยยังชีพผู้สูงอายุ ผู้พิการ และสวัสดิการ</p></a>
+<a class="card service-card" href="#request" data-keywords="ภาษี ที่ดิน สิ่งปลูกสร้าง ภาษีป้าย"><div class="service-icon">🧾</div><h3>ภาษีและรายได้</h3><p>ข้อมูลภาษีที่ดินและสิ่งปลูกสร้าง ภาษีป้าย</p></a>
+<a class="card service-card" href="#request" data-keywords="ขออนุญาต ก่อสร้าง อาคาร"><div class="service-icon">🏗️</div><h3>ขออนุญาตก่อสร้าง</h3><p>สอบถามขั้นตอนและเอกสารที่ต้องเตรียม</p></a>
+<a class="card service-card" href="#request" data-keywords="น้ำประปา ไฟฟ้า ถนน ซ่อมแซม"><div class="service-icon">🛠️</div><h3>แจ้งซ่อมสาธารณูปโภค</h3><p>แจ้งไฟส่องสว่าง ถนนชำรุด หรือน้ำประปาขัดข้อง</p></a>
+<a class="card service-card" href="#news" data-keywords="ประกาศ จัดซื้อจัดจ้าง ข่าว"><div class="service-icon">📑</div><h3>ประกาศจัดซื้อจัดจ้าง</h3><p>ติดตามประกาศและข่าวจากหน่วยงาน</p></a>
+<a class="card service-card" href="#contact" data-keywords="ติดต่อ โทรศัพท์ แผนที่ เวลาทำการ"><div class="service-icon">📍</div><h3>ข้อมูลติดต่อและแผนที่</h3><p>ดูช่องทางติดต่อและเวลาทำการของ อบต.</p></a>
+</div><p id="searchMessage" class="hint" aria-live="polite"></p>
+</section>
+<div class="stats"><div><strong>บริการออนไลน์</strong><span>เข้าถึงได้ตลอด 24 ชั่วโมง</span></div><div><strong>ข้อมูลชัดเจน</strong><span>รวมช่องทางติดต่อไว้ที่เดียว</span></div><div><strong>ใช้งานง่าย</strong><span>รองรับมือถือ แท็บเล็ต และคอมพิวเตอร์</span></div></div>
+<section class="container grid two-col" id="news">
+<div class="card"><div class="section-head"><div><h2>ข่าวประชาสัมพันธ์</h2><p>ตัวอย่างรายการข่าว — โปรดเปลี่ยนเป็นข่าวจริงของหน่วยงาน</p></div></div>
+<div class="news-item"><div class="datebox"><small>ตัวอย่าง</small>01</div><div><span class="tag">ประชาสัมพันธ์</span><h3>กำหนดการให้บริการประชาชนประจำเดือน</h3><p>ตรวจสอบวัน เวลา และเอกสารที่ต้องเตรียมกับเจ้าหน้าที่ก่อนเข้ารับบริการ</p></div></div>
+<div class="news-item"><div class="datebox"><small>ตัวอย่าง</small>02</div><div><span class="tag">ประกาศ</span><h3>ช่องทางแจ้งปัญหาในพื้นที่ตำบล</h3><p>ประชาชนสามารถติดต่อหน่วยงานผ่านโทรศัพท์หรือยื่นเรื่องที่สำนักงาน</p></div></div>
+<div class="news-item"><div class="datebox"><small>ตัวอย่าง</small>03</div><div><span class="tag">แจ้งเตือน</span><h3>ติดตามประกาศจากหน่วยงานอย่างเป็นทางการ</h3><p>ก่อนดำเนินการตามประกาศ ควรตรวจสอบข้อมูลล่าสุดจากช่องทางทางการของ อบต.</p></div></div>
+</div>
+<div class="card" id="about"><h2 style="margin-top:0;color:var(--navy)">เกี่ยวกับ อบต.</h2><p>องค์การบริหารส่วนตำบลเป็นหน่วยงานปกครองส่วนท้องถิ่น มีหน้าที่ให้บริการสาธารณะ พัฒนาคุณภาพชีวิต และดูแลความเป็นอยู่ของประชาชนในพื้นที่</p><div class="notice">⚠️ เว็บไซต์นี้เป็นต้นแบบเพื่อสาธิตการใช้งาน กรุณาเปลี่ยนชื่อหน่วยงาน ข่าว ที่อยู่ เบอร์โทรศัพท์ และข้อมูลบริการให้ตรงกับ อบต. จริงก่อนเผยแพร่</div><h3>ลิงก์ด่วน</h3><div class="quick-links"><a href="#request">✍ ส่งคำร้อง</a><a href="#tracking">🔍 ติดตามเรื่อง</a><a href="#news">📢 ข่าวสาร</a><a href="#contact">☎ ติดต่อเจ้าหน้าที่</a></div></div>
+</section>
+<section class="container" id="request"><div class="section-head"><div><h2>ยื่นคำร้อง / แจ้งปัญหาออนไลน์</h2><p>กรอกข้อมูลให้ครบถ้วนเพื่อสร้างแบบคำร้องตัวอย่าง</p></div></div>
+<div class="grid form-layout">
+<form class="card form-card" id="requestForm"><h3 style="margin-top:0">แบบฟอร์มคำร้อง</h3>
+<div class="notice">แบบฟอร์มนี้เป็นเดโม ข้อมูลจะไม่ถูกส่งไปยัง อบต. จริง และไม่ควรกรอกข้อมูลส่วนบุคคลที่ละเอียดอ่อน</div>
+<label for="reqType">ประเภทคำร้อง *</label><select id="reqType" required><option value="">-- เลือกประเภท --</option><option>ร้องเรียน / ร้องทุกข์</option><option>ขยะและสิ่งแวดล้อม</option><option>สวัสดิการสังคม</option><option>ภาษีและรายได้</option><option>ขออนุญาตก่อสร้าง</option><option>แจ้งซ่อมสาธารณูปโภค</option><option>อื่น ๆ</option></select>
+<label for="reqName">ชื่อผู้ติดต่อ *</label><input id="reqName" required maxlength="100" autocomplete="name" placeholder="ชื่อ-นามสกุล">
+<label for="reqContact">เบอร์โทรศัพท์หรืออีเมล *</label><input id="reqContact" required maxlength="120" placeholder="ช่องทางให้เจ้าหน้าที่ติดต่อกลับ">
+<label for="reqArea">หมู่ที่ / ชุมชน (ถ้ามี)</label><input id="reqArea" maxlength="100" placeholder="เช่น หมู่ 2 บ้าน...">
+<label for="reqDetail">รายละเอียดคำร้อง *</label><textarea id="reqDetail" required maxlength="1500" placeholder="อธิบายปัญหา สถานที่ และรายละเอียดที่จำเป็น"></textarea>
+<label style="display:flex;gap:9px;align-items:flex-start;font-weight:normal"><input id="reqConsent" type="checkbox" required style="width:auto;margin-top:7px"> ยืนยันว่าให้ข้อมูลเท่าที่จำเป็นและเข้าใจว่าเป็นแบบฟอร์มสาธิต *</label>
+<button class="btn btn-primary" type="submit" style="margin-top:14px;width:100%">สร้างเลขคำร้องตัวอย่าง</button>
+<p class="hint">หากเป็นเหตุฉุกเฉิน โปรดติดต่อหน่วยงานที่รับผิดชอบโดยตรง ไม่ควรรอคำตอบจากแบบฟอร์มนี้</p>
+<div id="requestResult" class="status-result" role="status"></div>
+</form>
+<div class="card" id="tracking"><h3 style="margin-top:0">ติดตามสถานะคำร้อง</h3><p>ใส่เลขคำร้องที่ระบบตัวอย่างสร้างให้ เพื่อดูสถานะที่เก็บไว้ในเบราว์เซอร์เครื่องนี้</p>
+<form id="trackForm" class="form-card"><label for="trackId">เลขคำร้อง</label><input id="trackId" required placeholder="เช่น DEMO-20261019-1234"><button class="btn btn-outline" style="margin-top:12px;width:100%" type="submit">🔍 ตรวจสอบสถานะ</button></form>
+<div id="trackResult" class="status-result" role="status"></div>
+<hr style="border:0;border-top:1px solid var(--line);margin:25px 0"><h3>ขั้นตอนการดำเนินการ</h3>
+<ol><li>เลือกประเภทเรื่องและระบุรายละเอียด</li><li>ระบบจริงควรออกเลขรับเรื่องและส่งข้อมูลเข้าฐานข้อมูลของ อบต.</li><li>เจ้าหน้าที่ตรวจสอบและประสานงาน</li><li>ประชาชนติดตามผลผ่านเลขรับเรื่อง</li></ol>
+<p class="hint">ขั้นตอนด้านบนเป็นแนวทางตัวอย่าง ต้องปรับตามระเบียบและกระบวนงานของหน่วยงานจริง</p>
+</div></div>
+</section>
+<section class="container faq"><div class="section-head"><div><h2>คำถามที่พบบ่อย</h2><p>ข้อมูลทั่วไปก่อนติดต่อเจ้าหน้าที่</p></div></div>
+<details><summary>ต้องเตรียมเอกสารอะไรก่อนติดต่อ อบต.?</summary><p>ขึ้นอยู่กับประเภทบริการ ควรตรวจสอบรายการเอกสารและเงื่อนไขล่าสุดกับหน่วยงานก่อนเดินทาง</p></details>
+<details><summary>ยื่นคำร้องบนเว็บไซต์นี้แล้วเจ้าหน้าที่ได้รับเรื่องหรือไม่?</summary><p>ยังไม่ได้รับ เว็บไซต์นี้เป็นต้นแบบที่ทำงานในเบราว์เซอร์เท่านั้น ต้องเชื่อมต่อระบบหลังบ้านและฐานข้อมูลของหน่วยงานก่อนจึงจะรับเรื่องจริงได้</p></details>
+<details><summary>หากต้องการติดตามคำร้องจริงต้องทำอย่างไร?</summary><p>ติดต่อ อบต. ผ่านช่องทางทางการและใช้เลขรับเรื่องที่เจ้าหน้าที่ออกให้</p></details>
+</section>
+</main>
+<footer id="contact"><div class="footer-inner">
+<div><h3>องค์การบริหารส่วนตำบลตัวอย่าง</h3><p>บริการประชาชนด้วยความโปร่งใส รวดเร็ว และเป็นธรรม</p><p>📍 ที่อยู่: กรุณาระบุที่อยู่สำนักงานจริง</p></div>
+<div><h3>ติดต่อหน่วยงาน</h3><p>☎ โทรศัพท์: กรุณาระบุเบอร์ทางการ</p><p>✉ อีเมล: กรุณาระบุอีเมลทางการ</p><p>🕘 เวลาทำการ: จันทร์–ศุกร์ 08.30–16.30 น.</p></div>
+<div><h3>เมนูที่เกี่ยวข้อง</h3><a href="#services">บริการประชาชน</a><a href="#news">ข่าวประชาสัมพันธ์</a><a href="#request">ยื่นคำร้องออนไลน์</a><a href="#tracking">ติดตามคำร้อง</a></div>
+</div><div class="copyright">© <span id="year"></span> องค์การบริหารส่วนตำบลตัวอย่าง · เว็บไซต์ต้นแบบสำหรับปรับใช้กับหน่วยงานจริง</div></footer>
+<button class="backtop" id="backTop" aria-label="กลับไปด้านบน" title="กลับไปด้านบน">↑</button><div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const $ = (id) => document.getElementById(id);
+$('year').textContent = new Date().getFullYear();
+const menu = $('mainNav'), menuToggle = $('menuToggle');
+menuToggle.addEventListener('click', () => {const open=menu.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menu.querySelectorAll('a').forEach(x=>x.classList.remove('active'));a.classList.add('active');}));
+function toast(message){$('toast').textContent=message;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),3200);}
+$('siteSearch').addEventListener('submit',e=>{e.preventDefault();const q=$('searchInput').value.trim().toLocaleLowerCase('th');let count=0;document.querySelectorAll('#serviceGrid .service-card').forEach(card=>{const text=(card.innerText+' '+card.dataset.keywords).toLocaleLowerCase('th');const match=!q||text.includes(q);card.classList.toggle('hidden',!match);if(match)count++;});$('searchMessage').textContent=q?(count?`พบ ${count} บริการที่ตรงกับ “${$('searchInput').value.trim()}”`:'ไม่พบบริการที่ตรงกัน ลองใช้คำค้นอื่น หรือติดต่อเจ้าหน้าที่'):'แสดงบริการทั้งหมด';$('services').scrollIntoView({behavior:'smooth'});});
+function loadCases(){try{return JSON.parse(localStorage.getItem('demoObtaCases')||'{}')}catch(e){return {}}}
+function saveCases(cases){try{localStorage.setItem('demoObtaCases',JSON.stringify(cases));return true}catch(e){return false}}
+$('requestForm').addEventListener('submit',e=>{e.preventDefault();const id='DEMO-'+new Date().toISOString().slice(0,10).replaceAll('-','')+'-'+Math.floor(1000+Math.random()*9000);const item={id,type:$('reqType').value,name:$('reqName').value.trim(),contact:$('reqContact').value.trim(),area:$('reqArea').value.trim(),detail:$('reqDetail').value.trim(),status:'รับข้อมูลตัวอย่างแล้ว (ยังไม่ได้ส่งให้ อบต.)',created:new Date().toLocaleString('th-TH')};const cases=loadCases();cases[id]=item;const saved=saveCases(cases);const result=$('requestResult');result.classList.add('show');result.innerHTML=`<strong>${saved?'สร้างเลขคำร้องตัวอย่างแล้ว':'สร้างเลขคำร้องแล้ว แต่เบราว์เซอร์ไม่อนุญาตให้บันทึก'}</strong><p>เลขอ้างอิง: <strong>${item.id}</strong></p><p>${item.status}</p><button class="btn btn-outline btn-small" id="copyId" type="button">คัดลอกเลขคำร้อง</button><p class="hint">บันทึกเลขนี้ไว้เพื่อลองใช้ส่วนติดตามในเบราว์เซอร์เครื่องเดิม</p>`;$('trackId').value=id;$('copyId').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(id);toast('คัดลอกเลขคำร้องแล้ว')}catch(err){$('trackId').select();toast('เลือกเลขคำร้องไว้แล้ว สามารถคัดลอกได้')}});});
+$('trackForm').addEventListener('submit',e=>{e.preventDefault();const id=$('trackId').value.trim().toUpperCase();const item=loadCases()[id];const result=$('trackResult');result.classList.add('show');if(item){result.innerHTML=`<strong>เลขอ้างอิง: ${item.id}</strong><p>ประเภท: ${item.type}</p><p>วันที่สร้าง: ${item.created}</p><p>สถานะ: ${item.status}</p><p class="hint">เป็นข้อมูลตัวอย่างในเบราว์เซอร์นี้เท่านั้น ไม่ใช่สถานะจากหน่วยงานจริง</p>`}else{result.textContent='ไม่พบเลขคำร้องนี้ในเบราว์เซอร์เครื่องนี้ หากเป็นเรื่องจริง โปรดตรวจสอบเลขรับเรื่องกับ อบต. โดยตรง';}});
+const backTop=$('backTop');window.addEventListener('scroll',()=>backTop.classList.toggle('show',window.scrollY>400));backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body></html>
